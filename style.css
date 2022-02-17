@@ -1,0 +1,64 @@
+*{
+    padding: 0; 
+    margin: 0; 
+    box-sizing: border-box;
+}
+nav{
+    height: 80px;
+    background-color: darkslategray;
+}
+.name{
+    color: rgb(141, 17, 17);
+    font-size: 35px;
+    color: midnightblue;
+    font-weight:bold;
+    margin-right: 190px;
+    margin-left: 18px;
+
+}
+.navList a,li{
+    text-decoration: none;
+    list-style: none;
+    color: rgb(133, 197, 162);
+}
+nav a {
+    color : wheat ;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 7px 10px;
+    border-radius: 2px;
+}
+a.active,a:hover{
+    border: 1px solid white;
+}
+nav ul{
+    float : right;
+    margin-right: 40px;
+}
+nav li{
+    display: inline-block;
+    margin: 0 50px;
+    line-height: 60px;
+}
+.container{
+    /* border: 2px solid red; */
+    height:100% ;
+    width: 80% ;
+    margin: 0px 0px 0px 120px;
+}
+.myForm{
+    /* border: 2px solid red; */
+    background-image: linear-gradient(to bottom, #032659, #06356a, #0b457a, #13568b, #1b679b);
+}
+.form-label{
+    color: white;
+}
+#date{
+    background-color: rgb(58, 66, 58);
+    padding: 7px;
+    font-family: monospace;
+    outline: none;
+    color: red;
+    border-radius: 5px;
+}
+

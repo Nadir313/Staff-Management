@@ -1,0 +1,38 @@
+
+<!-- <?php 
+die ;
+        $sql = "SELECT * FROM staffmanagement " ;
+        $result = mysqli_query($connect, $sql);
+        $Check = mysqli_num_rows($result) ;
+        $s = mysqli_fetch_assoc($result) ;
+
+        echo (!$connect) ? "connection is failed ".mysqli_connect_error() : "connection is done " ;
+        echo "<hr>" ;
+
+        var_dump($s) ;
+        echo "<hr>" ;
+        echo $s["First Name"] ;
+        echo "<hr>" ;
+        if($Check > 0){
+            while($row = mysqli_fetch_assoc($result)){
+                var_dump($row);
+                echo('<hr>');
+            }
+        }
+    ?>  -->
+
+<?php 
+die ;
+    $sql = "SELECT * FROM staffmanagement ;" ;
+    $result = mysqli_query($connect , $sql) ;
+    $checkRes = mysqli_num_rows($result) ;
+
+    if($checkRes > 0){
+        while($myRow = mysqli_fetch_assoc($result)){
+            echo "this is the :".$myRow["First Name"]."<hr>" ;
+            // echo "<pre>" ;
+            //     var_dump($myRow) ;
+            // echo "</pre>" ;
+        }
+    }
+?>

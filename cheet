@@ -36,3 +36,27 @@ die ;
         }
     }
 ?>
+
+
+
+
+
+
+
+
+<section>
+        <table>
+            <tr>
+                <th>first name</th>
+                <th>last name</th>
+                <th>salary</th>
+            </tr>
+            <?php while($myRow = mysqli_fetch_assoc($result)){    ?>
+                <tr>
+                    <td><?php echo $myRow["First Name"]  ?></td>
+                    <td> <?php echo $myRow["Last Name"]   ?></td>
+                    <td><?php echo $myRow["Salary"]  ?></td>
+                </tr>
+            <?php }  ?>    
+        </table>
+    </section>

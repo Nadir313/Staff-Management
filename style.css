@@ -14,7 +14,6 @@ nav{
     font-weight:bold;
     margin-right: 190px;
     margin-left: 18px;
-
 }
 .navList a,li{
     text-decoration: none;
@@ -41,13 +40,11 @@ nav li{
     line-height: 60px;
 }
 .container{
-    /* border: 2px solid red; */
     height:100% ;
-    width: 80% ;
-    margin: 0px 0px 0px 120px;
+    width: 100% ;
 }
 .myForm{
-    /* border: 2px solid red; */
+    padding: 0px 0px 0px 120px; 
     background-image: linear-gradient(to bottom, #032659, #06356a, #0b457a, #13568b, #1b679b);
 }
 .form-label{
@@ -60,5 +57,18 @@ nav li{
     outline: none;
     color: red;
     border-radius: 5px;
+}
+#tableTitle{
+    border: 2px solid rgb(72, 88, 79);
+    background-color: rgb(72, 88, 79);
+    color: red;
+}
+#tableTitle h2{
+    color: black ;
+    text-align :center ;
+}
+#staffPic{
+    height:70px ;
+    width:80px ;
 }
 

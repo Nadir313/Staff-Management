@@ -10,10 +10,10 @@
 </head>
 <body>
     <nav>
-     <label class="name" for="">Company</label>
+     <label class="name" for="">West Elite</label>
         <ul class="navList">
             <li><a href="index.php">Employee List</a></li>
-            <li><a href="">Search</a></li>
+            <li><a href="search.php">Search</a></li>
             <li><a href="form.php">Add Employee</a></li>
         </ul>
     </nav>

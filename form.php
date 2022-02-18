@@ -1,5 +1,8 @@
-<?php include "navbar.php" ?>
-<div class="myForm">
+<?php
+    include "navbar.php" ;
+    include "DB.php" ;
+ ?>
+<div class="myForm ">
 <div class="container">
 <form class="row g-3" action="form.php" method="POST">
   <div class="col-md-6">
@@ -17,7 +20,7 @@
   </div>
   <div class="col-6">
     <label for="inputAddress2" class="form-label">Salary</label>
-    <input type="text" class="form-control" id=""  name="salary">
+    <input type="text" class="form-control" id="" name="salary">
   </div>
 
   <div id="job" class="col-md-6">
@@ -29,33 +32,31 @@
     <input type="date" name="birthDate" id="date" name="birthDate">
   </div>
   <div class="col-12">
-    <button type="submit" class="btn btn-primary" name="submit">Sign in</button>
+    <button type="submit" class="btn btn-success" name="submit">Add Employee</button>
   </div>
 </form>
 </div>
 </div>
-
 <?php 
-
     if(isset($_POST["submit"])){
       $firstName = $_POST["firstName"] ;
       $lastName = $_POST["lastName"] ;
-      $dapar = $_POST["Departement"] ;
+      $departement= $_POST["Departement"] ;
       $salary = $_POST["salary"] ;
       $job = $_POST["job"] ;
       $birthDate = $_POST["birthDate"] ;
       echo "<hr>" ;
-        echo $firstName ;
-      echo "<hr>" ;
-        echo $lastName ;
-      echo "<hr>" ;
-        echo $salary ;
-      echo "<hr>" ;
-        echo $dapar ;
-      echo "<hr>" ;
-        echo $job ;
-      echo "<hr>" ;
-        echo $birthDate ;
-      echo "<hr>" ;
+      // die ;
+      echo "it works" ; 
+      $myQuery = "INSERT INTO
+      teammanagement(First_Name, Last_Name, Birth_Date, Departement, Salary,Task )
+      VALUES('$firstName', '$lastName', '$birthDate', '$departement', $salary, '$job') ;" ;
+      mysqli_query($connect,$myQuery) ;
     }
+    // if(isset($_POST["submit"])){ 
+    // $deletedId = $_POST["id"] ;
+    // $myQuery = "DELETE FROM teammanagement WHERE id = {$deletedId} " ;
+
+    // }
+    include "footer.php" ;
 ?>

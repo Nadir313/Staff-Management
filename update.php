@@ -3,27 +3,31 @@
     include "DB.php" ;
 
       $id = $_GET["id"];
-
-      echo "<hr>" ;
-        echo $id ;
-      echo "<hr>" ;
-    // if(isset($_POST["submit"])){
-    //     $firstName = $_POST["firstName"] ;
-    //     $lastName = $_POST["lastName"] ;
-    //     $departement= $_POST["Departement"] ;
-    //     $salary = $_POST["salary"] ;
-    //     $job = $_POST["job"] ;
-    //     $birthDate = $_POST["birthDate"] ;
-    //     $id = $_POST["id"] ;
-
-        $sql = "SELECT * FROM teammanagement WHERE id = $id" ;
-        $result = mysqli_query($connect , $sql) ;
-        $employee = mysqli_fetch_assoc($result) ;
-        if($connect){
-          echo "connected" ;
-        }else{
-          echo "connection failed".mysqli_connect_error() ;
+        // $sql = "SELECT * FROM teammanagement WHERE id = $id" ;
+        
+        // $result = mysqli_query($connect , $sql) ;
+        // $employee = mysqli_fetch_assoc($result) ;
+        if(isset($_POST["submit"])){
+          $firstName = $_POST["firstName"] ;
+          $lastName = $_POST["lastName"] ;
+          $departement = $_POST["Departement"] ;
+          $salary = $_POST["salary"] ;
+          $job = $_POST["job"] ;
+          // The query 
+          $sql = "UPDATE teammanagement 
+          SET First_Name = '$firstName' ,
+          Last_Name = '$lastName' ,
+          Birth_Date = '$birthDate' ,
+          Departement = '$departement' ,
+          Salary = $salary ,
+          Task = $job  WHERE id = $id" ;
         }
+        
+        // if($connect){
+        //   echo "connected" ;
+        // }else{
+        //   echo "connection failed".mysqli_connect_error() ;
+        // }()
     //     echo "<pre>" ;
     //       var_dump($myRow) ;
     //     echo "</pre>" ;

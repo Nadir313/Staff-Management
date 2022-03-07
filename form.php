@@ -1,6 +1,7 @@
 <?php
     include "navbar.php" ;
     include "DB.php" ;
+  
  ?>
 <div class="myForm ">
 <div class="container">
@@ -51,12 +52,13 @@
       $myQuery = "INSERT INTO
       teammanagement(First_Name, Last_Name, Birth_Date, Departement, Salary,Task )
       VALUES('$firstName', '$lastName', '$birthDate', '$departement', $salary, '$job') ;" ;
-      mysqli_query($connect,$myQuery) ;
+      // mysqli_query($connect,$myQuery) ;
+      // if( mysqli_query($connect,$myQuery)){
+      //   header('location : http://localhost/Staff-Management2/index.php)') ;
+      // }else{
+      //   echo "error".mysqli_error() ;
+      // }
     }
-    // if(isset($_POST["submit"])){ 
-    // $deletedId = $_POST["id"] ;
-    // $myQuery = "DELETE FROM teammanagement WHERE id = {$deletedId} " ;
-
-    // }
+   
     include "footer.php" ;
 ?>

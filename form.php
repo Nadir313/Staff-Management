@@ -40,24 +40,23 @@
 </div>
 <?php 
     if(isset($_POST["submit"])){
+      
       $firstName = $_POST["firstName"] ;
-      $lastName = $_POST["lastName"] ;
-      $departement= $_POST["Departement"] ;
+      $lastName = $_POST["lastName"];
+      $departement= $_POST["Departement"];
       $salary = $_POST["salary"] ;
       $job = $_POST["job"] ;
       $birthDate = $_POST["birthDate"] ;
-      echo "<hr>" ;
-      // die ;
-      echo "it works" ; 
+  
       $myQuery = "INSERT INTO
       teammanagement(First_Name, Last_Name, Birth_Date, Departement, Salary,Task )
       VALUES('$firstName', '$lastName', '$birthDate', '$departement', $salary, '$job') ;" ;
-      // mysqli_query($connect,$myQuery) ;
-      // if( mysqli_query($connect,$myQuery)){
-      //   header('location : http://localhost/Staff-Management2/index.php)') ;
-      // }else{
-      //   echo "error".mysqli_error() ;
-      // }
+      mysqli_query($connect,$myQuery) ;
+      if( mysqli_query($connect,$myQuery)){
+        header('location : http://localhost/Staff-Management2/index.php)') ;
+      }else{
+        echo "error".mysqli_error() ;
+      }
     }
    
     include "footer.php" ;

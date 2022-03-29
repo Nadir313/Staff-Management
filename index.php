@@ -7,10 +7,6 @@
         $sql = "SELECT * FROM teammanagement" ;
         $result = mysqli_query($connect , $sql) ;
         $checking = mysqli_num_rows($result) ;
-        /////
-        if(isset($_POST["submit1"])){
-            echo "hello" ;
-        }
      ?>
     <aside>
        <div id="tableTitle">
@@ -30,10 +26,10 @@
       <th scope="col">U/D</th>
     </tr>
   </thead> 
-  <?php while($myRow = mysqli_fetch_assoc($result)){  ?>
+  <?php $i=1 ; while($myRow = mysqli_fetch_assoc($result)){  ?>
   <tbody>
     <tr>
-      <th scope="row"><?php echo $myRow["id"] ?></th>
+      <th scope="row"><?php echo $i ?></th>
       <td><?php echo $myRow["First_Name"] ?></td>
       <td><?php echo $myRow["Last_Name"] ?></td>
       <td><?php echo $myRow["Departement"] ?></td>
@@ -43,12 +39,11 @@
       <td><?php echo "hi" ?></td>
       <td>
           <a href="update.php?id=<?php echo $myRow["id"] ?>"  class='btn btn-default bg-success'>Update</a>
-          <a href="index.php?id=<?php echo $myRow["id"] ?>"  class='btn btn-default bg-danger'>Delete</a>
-          <!-- <button type="submit" name="submit1" class="btn btn-default bg-danger">Delete</button> -->
+          <a href="delete.php?id=<?php echo $myRow["id"] ?>"  class='btn btn-default bg-danger'>Delete</a>
     </td>
     </tr>
   </tbody>
-  <?php }  ?>
+  <?php $i++ ; }  ?>
 </table>
     </aside>
 <?php include "footer.php"?>

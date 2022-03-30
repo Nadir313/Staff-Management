@@ -53,7 +53,7 @@
       VALUES('$firstName', '$lastName', '$birthDate', '$departement', $salary, '$job') ;" ;
       mysqli_query($connect,$myQuery) ;
       if( mysqli_query($connect,$myQuery)){
-        header('location : http://localhost/Staff-Management2/index.php)') ;
+        header('location: http://localhost/Staff-Management2/index.php') ;
       }else{
         echo "error".mysqli_error() ;
       }

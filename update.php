@@ -5,7 +5,7 @@
     if(isset($_GET["id"])){
       $id = $_GET["id"] ;
       $query = "SELECT * FROM teammanagement WHERE id = $id" ;
-      // $data = mysqli_query($connect, $query) ; 
+      $data = mysqli_query($connect, $query) ; 
       $result = mysqli_fetch_assoc($data) ;
     }
         if(isset($_POST["submit"])){
@@ -16,6 +16,7 @@
           $departement = $_POST["Departement"] ;
           $salary = $_POST["salary"] ;
           $job = $_POST["job"];
+
           $sql = "UPDATE teammanagement 
           SET First_Name = '$firstName' ,
           Last_Name = '$lastName' ,
@@ -60,7 +61,7 @@
     <input type="date" name="birthDate" id="date" value="<?php echo $result["Birth_Date"] ?>"  name="birthDate">
   </div>
   <div class="col-12">
-    <button type="submit" class="btn btn-primary"  name="submit">Sign in</button>
+    <button type="submit" class="btn btn-primary"  name="submit">Up date</button>
   </div>
 </form>
 </div>
